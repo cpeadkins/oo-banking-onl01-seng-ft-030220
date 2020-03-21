@@ -1,7 +1,8 @@
 class Transfer
+  attr_accessor :sender
   
-  def initialize(x,y,z)
-  
+  def initialize(sender,y,z)
+    @sender = sender
   end
   
 end
