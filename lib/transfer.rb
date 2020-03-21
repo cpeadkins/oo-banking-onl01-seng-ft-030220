@@ -1,17 +1,17 @@
 class Transfer
   attr_accessor :sender, :receiver, :status, :amount
-  
-  def initialize(sender,receiver,amount)
+
+  def initialize(sender, receiver, bank_transfer)
+    @bank_transfer = bank_transfer
     @sender = sender
     @receiver = receiver
     @status = "pending"
     @amount = 50
   end
-  
+
   def valid?
     @sender.valid? && @receiver.valid?
-    # @status = true
-    true
+    @status = true
   end
 
   def execute_transaction
@@ -33,5 +33,5 @@ class Transfer
       @status = "reversed"
     end
   end
-  
+
 end
