@@ -1,6 +1,7 @@
 class Transfer
   
-  def initialize
+  def initialize(x,y,z)
+  
   end
   
 end
